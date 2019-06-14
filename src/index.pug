@@ -1,0 +1,259 @@
+extends pug/base
+
+include pug/mixins/select
+include pug/mixins/infobox
+include pug/mixins/input
+include pug/mixins/slider
+
+block content
+  .container.hero
+    .col_width_12.hero__header
+      a(href="#").logo
+        img(
+          src=require('./resources/img/logo.png'), 
+          alt="Belberry"
+        ).logo__image
+
+      nav.top-nav
+        ul.top-nav__list
+          li.top-nav__item
+            a.top-nav__link(
+              href="#"
+              data-anchor="catalog")
+              | Автомобильный ряд
+          
+          li.top-nav__item
+            a.top-nav__link(
+              href="#"
+              data-anchor="calc")
+              | Кредитный калькулятор
+          
+          li.top-nav__item
+            a.top-nav__link(
+              href="#"
+              data-anchor="form")
+              | Задать вопрос
+
+      a(href="#").hero__phone
+        | +7 (495) 123—45—67
+      
+      a(href="#").hero__callback
+        | Заказать обратный звонок
+  
+    .col_width_3
+      h1.hero__title
+        | Volkswagen Credit Fit
+      
+      p.hero__subtitle
+        | Непревзойденная легкость
+
+      p.hero__description
+        | Программа кредитования с остаточным платежом при приобретении нового автомобиля 
+        | Volkswagen — это простой способ получить желаемый результат!
+
+      button.button.button_type_more
+        | Подробнее
+  
+  #catalog.catalog
+    .container
+      .col_width_12.catalog__header
+        h2.catalog__title
+          | Автомобильный ряд Wolksvagen
+        
+        p.catalog__description
+          | Выберите тот, который подходит именно вам
+
+    .container.catalog__cars
+      - var cars = require('./resources/json/cars.json')
+      
+      each car in cars
+        .car.col_width_4
+          img(
+            src=require(`./resources/img/cars-${car.id}.png`),
+            alt=car.name).car__image
+          
+          .car__info
+            h3.car__name
+              | #{car.name}
+            
+            p.car__price
+              | #{car.price}
+
+  #form.form
+    .container.form__flex
+      .col_width_4.form__container
+        h2.form__title
+          | Ваши вопросы — наша забота
+
+        p.form__description
+          | Оставьте свои данные и мы вам перезвоним
+
+        form
+          +input({
+            type: 'text',
+            name: 'calcName',
+            label: false,
+            placeholder: 'Имя',
+            require: true
+          })
+
+          +input({
+            type: 'tel',
+            name: 'calcTel',
+            label: false,
+            placeholder: '+7 (999) 123-45-67',
+            require: true
+          })
+
+          +input({
+            type: 'email',
+            name: 'calcEmail',
+            label: false,
+            placeholder: 'Email',
+            require: false
+          })
+
+          +input({
+            type: 'submit',
+            value: 'Перезвоните мне',
+            addClass: 'recall'
+          })
+
+      .col_width_8.form__advert
+        img(
+          src=require(`./resources/img/form-image.png`), 
+          alt="Passat Alltrack").form__image
+
+        .form__indicators
+          - var indicators = require('./resources/json/indicators.json')
+            
+            each indicator in indicators
+              .indicator
+                .indicator__name
+                  | #{indicator.name}
+
+                .indicator__value
+                  | #{indicator.value}
+  
+  #calc.calc
+    .container
+      .col_width_12.calc__header
+        h2.calc__title
+          | Кредитный калькулятор
+        
+        p.calc__description
+          | Установите удобные для вас условия кредитования
+
+    form
+      .container.calc__flex
+        .col_width_4.calc__step.is-active
+          .calc__step-title.calc__step-title_num_one
+            | Шаг 1. Выбор автомобиля
+
+          img(
+            src=require(`./resources/img/calc-image.png`), 
+            alt="Шаг 1. Выбор автомобиля").calc__image
+  
+
+          +select({
+            name: "option-1",
+            label: "Модель автомобиля",
+            values: [
+              "Passat", "Passat Variant", "Polo"
+            ]
+          })
+
+          +select({
+            name: "option-2",
+            label: "Комплектация",
+            values: [
+              "Trendline", "Comfortline", "Highline"
+            ]
+          })
+
+          +infobox({
+            title: false,
+            blocks: [
+              {
+                name: "Стоимость автомобиля",
+                value: "1 909 000 ₽",
+                type: "small"
+              },
+              {
+                name: "Ежемесячный платеж",
+                value: "29 400 ₽",
+                type: "normal"
+              }
+            ] 
+          })
+
+        .col_width_4.calc__step.is-active
+          .calc__step-title.calc__step-title_num_two
+            | Шаг 2. Выбор кредитных условий
+
+          +slider({
+            title: "Первоначальный взнос",
+            value: "243 000 ₽",
+            sliderID: "contributionSlider"
+          })
+
+          +slider({
+            title: "Срок кредитования",
+            value: "36 месяцев",
+            sliderID: "creditSlider"
+          })
+        
+          +infobox({
+            title: "Низкий ежемесячный платеж",
+            blocks: [
+              {
+                name: "Кредитная ставка",
+                value: "12,3%",
+                type: "normal"
+              },
+              {
+                name: "Программа гарант",
+                value: "29 400 ₽",
+                type: "normal"
+              },
+              {
+                name: "Стандартный кредит",
+                value: "48 000 ₽",
+                type: "thin"
+              }
+            ] 
+          })
+
+        .col_width_4.calc__step
+          .calc__step-title.calc__step-title_num_three
+            | Шаг 3. Отправка заявки
+
+          +input({
+            type: 'text',
+            name: 'calcName',
+            label: 'Ваше имя',
+            placeholder: 'Имя',
+            require: true
+          })
+
+          +input({
+            type: 'tel',
+            name: 'calcTel',
+            label: 'Номер телефона',
+            placeholder: '+7 (999) 123-45-67',
+            require: true
+          })
+
+          +input({
+            type: 'email',
+            name: 'calcEmail',
+            label: 'Email',
+            placeholder: 'Email',
+            require: false
+          })
+
+          +input({
+            type: 'submit',
+            value: 'Отправить заявку',
+            addClass: 'order'
+          })

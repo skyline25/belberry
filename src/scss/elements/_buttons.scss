@@ -1,0 +1,33 @@
+.button {
+  padding: pxToRem(16) pxToRem(40);
+  border: none;
+  font-size: pxToRem(16);
+  font-weight: 400;
+  letter-spacing: pxToRem(0.42);
+  line-height: pxToRem(15);
+  box-sizing: border-box;
+  border-radius: pxToRem(2);
+  
+  &_type {
+    &_more {
+      box-shadow: 0 pxToRem(6) pxToRem(24) rgba(255, 255, 255, 0.15), 0 pxToRem(2) 0 $color-cerulean-blue;
+      background: $color-mine-shaft;
+      border: pxToRem(1) solid $color-mine-shaft;
+      color: $color-white;
+    }
+
+    &_recall {
+      box-shadow: 0 pxToRem(6) pxToRem(24) rgba(50, 102, 188, 0.35), 0 pxToRem(2) 0 $color-white;
+      border: pxToRem(1) solid $color-cornflower-blue;
+      background: $color-cornflower-blue;
+      color: $color-white;
+    }
+
+    &_order {
+      box-shadow: 0 pxToRem(6) pxToRem(24) rgba(50, 102, 188, 0.35), 0 pxToRem(2) 0 $color-white;
+      background: $color-cornflower-blue;
+      border: 1px solid $color-cornflower-blue;
+      color: $color-white;
+    }
+  }
+}

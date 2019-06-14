@@ -1,0 +1,122 @@
+.slider {
+  margin-bottom: pxToRem(60);
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: pxToRem(24);
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    letter-spacing: pxToRem(0.32);
+    line-height: pxToRem(12);
+  }
+
+  &__value {
+    color: $color-white;
+    font-size: pxToRem(20);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+}
+
+.noUi-target {
+  height: pxToRem(24);
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.noUi-base {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: pxToRem(4);
+    margin-top: pxToRem(-2);
+    background-color: $color-white;
+    opacity: 0.2;
+    content: '';
+  }
+
+  .noUi-handle {
+    top: pxToRem(0);
+    right: pxToRem(-12) !important;
+    width: pxToRem(24);
+    min-width: pxToRem(24);
+    height: pxToRem(24);
+    min-height: pxToRem(24);
+    border: pxToRem(4) solid $color-white;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    cursor: default;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:focus,
+    &:active,
+    &:visited {
+      outline: none;
+    }
+  }
+
+  .noUi-connect {
+    position: relative;
+    background: none;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: pxToRem(4);
+      margin-top: pxToRem(-2);
+      background-color: $color-white;
+      content: '';
+    }
+  }
+}
+
+.noUi-marker-normal {
+  display: none;
+}
+
+.noUi-value-large {
+  font-size: 0;
+}
+
+.noUi-pips-horizontal {
+  top: 0;
+  margin-top: pxToRem(7);
+  padding: 0;
+  height: pxToRem(10);
+  max-height: pxToRem(10);
+  overflow: hidden;
+}
+
+.noUi-marker {
+  width: pxToRem(1);
+  height: pxToRem(10);
+  background: $color-white;
+  overflow: hidden;
+}
+
+.noUi-value-large {
+  width: pxToRem(1);
+  height: pxToRem(10);
+  overflow: hidden;
+}

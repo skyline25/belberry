@@ -1,0 +1,46 @@
+mixin input(option)
+
+  case option.type
+    when 'text'
+      div(class=`input__container input__container_require_${option.require}`)
+        if option.label
+          label.input__label(for=option.name)=option.label
+          
+        input#name.input(
+          type=option.type 
+          name=option.name
+          placeholder=option.placeholder)
+
+    when 'tel'
+      div(class=`input__container input__container_require_${option.require}`)
+        if option.label
+          label.input__label(for=option.name)=option.label
+        
+        input#tel.input(
+          type=option.type 
+          name=option.name
+          placeholder=option.placeholder)
+
+    when 'email'
+      div(class=`input__container input__container_require_${option.require}`)
+        if option.label
+          label.input__label(for=option.name)=option.label
+        
+        input#email.input(
+          type=option.type 
+          name=option.name
+          placeholder=option.placeholder)
+
+    when 'submit'
+      .input__line
+        input(
+          class=`input__submit button button_type_${option.addClass}`
+          type=option.type 
+          value=option.value)
+
+        span.input__terms
+          | Нажимая кнопку “#{option.value}”
+          | вы соглашаетесь с 
+          a.input__terms-link(href="#")
+            | политикой 
+          | обработки персональных данных

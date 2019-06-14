@@ -1,0 +1,90 @@
+.catalog {
+  &__header {
+    padding: pxToRem(154) pxToRem(24) pxToRem(80) pxToRem(24);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-black;
+    font-size: pxToRem(32);
+    font-weight: 700;
+    line-height: pxToRem(32);
+  }
+
+  &__description {
+    color: $color-dusty-gray;
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: pxToRem(1765);
+  }
+}
+
+.car {
+  margin-bottom: pxToRem(160);
+  font-size: 0;
+  &__image {
+    width: pxToRem(407);
+    max-width: 100%;
+    height: auto;
+    margin-bottom: pxToRem(16);
+  }
+
+  &__info {
+    padding: 0 pxToRem(24);
+  }
+
+  &__name {
+    min-height: pxToRem(24);
+    margin: 0 0 pxToRem(8) 0;
+    color: $color-black;
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__price {
+    margin: 0;
+    min-height: pxToRem(16);
+    color: $color-cerulean-blue;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: pxToRem(16);
+  }
+
+  &:first-of-type {
+    margin-top: pxToRem(152);
+  }
+
+  &:nth-of-type(4) {
+    margin-top: pxToRem(312);
+  }
+
+  &:nth-of-type(6) {
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(7) {
+    margin-top: 0;
+  }
+
+  &:nth-of-type(7),
+  &:nth-of-type(8){
+    margin-bottom: pxToRem(240);
+  }
+  
+  &:nth-of-type(7),
+  &:nth-of-type(8),
+  &:nth-of-type(9) {
+    .car__image {
+      width: pxToRem(554);
+    }
+  }
+}

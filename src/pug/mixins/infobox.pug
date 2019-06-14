@@ -1,0 +1,11 @@
+mixin infobox(option)
+  
+  .calc__infobox.infobox
+    if option.title
+      h3.infobox__title=option.title
+
+    each block in option.blocks
+      .infobox__line
+        p.infobox__name=block.name
+        
+        p(class=`infobox__value infobox__value_type_${block.type}`)=block.value

@@ -1,0 +1,78 @@
+.form {
+  padding: pxToRem(128) 0;
+  background: url('../resources/img/form-bg.png') center no-repeat;
+  background-size: 100vw;
+  background-size: cover;
+  color: $color-white;
+
+  &__container {
+    padding: 0 pxToRem(24);
+    box-sizing: border-box;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: pxToRem(16);
+    color: $color-gallery;
+    font-size: pxToRem(32);
+    font-weight: 700;
+    line-height: pxToRem(32);
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: pxToRem(80);
+    color: $color-dove-gray;
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: pxToRem(885);
+    margin-bottom: pxToRem(35);
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .input {
+    border: pxToRem(2) solid $color-mine-shaft-2;
+    background-color: $color-black;
+
+    &::placeholder {
+      color: $color-dusty-gray;
+    }
+  }
+}
+
+.indicator {
+  text-align: center;
+  &__name {
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: 400;
+    line-height: pxToRem(20);
+  }
+
+  &__value {
+    color: $color-cerulean-blue;
+    font-size: pxToRem(18);
+    font-weight: 700;
+    line-height: pxToRem(24);
+  }
+
+  &:nth-child(2) {
+    margin: 0 pxToRem(134);
+  }
+}

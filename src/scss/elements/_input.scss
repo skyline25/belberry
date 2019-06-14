@@ -1,0 +1,97 @@
+.input {
+  display: block;
+  width: 100%;
+  margin-bottom: pxToRem(24);
+  padding: pxToRem(18) pxToRem(24);
+  border-radius: 2px;
+  border: pxToRem(2) solid transparent;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: $color-white;
+  font-size: pxToRem(16);
+  font-weight: 400;
+  line-height: pxToRem(25);
+
+  &:focus {
+    padding-left: pxToRem(22);
+    border-left: pxToRem(4) solid $color-cerulean-blue;
+  }
+
+  &::placeholder {
+    opacity: 0.6;
+    color: $color-white;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+
+  &__container {
+    position: relative;
+    font-size: 0;
+  
+    &_require {
+      &_true {
+        &::after {
+          position: absolute;
+          bottom: pxToRem(20);
+          right: pxToRem(24);
+          display: block;
+          width: pxToRem(24);
+          height: pxToRem(24);
+          content: '';
+          background: url('../resources/img/form-check.png') center no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &_false {
+        &::after {
+          position: absolute;
+          bottom: pxToRem(26);
+          right: pxToRem(24);
+          display: block;
+          content: 'Необязательно';
+          opacity: 0.6;
+          color: $color-dusty-gray;
+          font-size: pxToRem(12);
+          font-weight: 400;
+          letter-spacing: pxToRem(0.48);
+          line-height: pxToRem(13);
+        }
+      }
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: flex-start;
+    margin-top: pxToRem(64);
+  }
+
+  &__submit {
+    margin-right: pxToRem(64);
+  }
+
+  &__terms {
+    color: $color-mine-shaft-2;
+    font-size: pxToRem(12);
+    font-weight: 400;
+    line-height: pxToRem(16);
+  }
+
+  &__terms-link {
+    color: $color-mine-shaft-2;
+    text-decoration: underline;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: pxToRem(8);
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: 400;
+    letter-spacing: pxToRem(0.28);
+    line-height: pxToRem(12);
+  }
+}

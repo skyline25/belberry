@@ -1,0 +1,8 @@
+mixin select(option)
+
+  .select
+    label(for=option.name).input__label.calc__label=option.label
+
+    select(name=option.name).calc__select
+      each value in option.values
+        option(value=value)=value

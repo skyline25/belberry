@@ -1,0 +1,100 @@
+.hero {
+  min-height: pxToRem(1262);
+  background: url('../resources/img/hero-bg.png') center no-repeat;
+  background-size: 100vw;
+  color: $color-white;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: pxToRem(176);
+    padding-top: pxToRem(40);
+  }
+
+  &__phone {
+    color: $color-white;
+    margin-right: pxToRem(80);
+    font-size: pxToRem(18);
+    font-weight: 500;
+    line-height: pxToRem(24);
+    text-decoration: none;
+  }
+
+  &__callback {
+    color: $color-white;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    letter-spacing: pxToRem(0.42);
+    line-height: pxToRem(16);
+    text-decoration: underline;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: pxToRem(40);
+    font-size: pxToRem(32);
+    font-weight: 700;
+    line-height: pxToRem(32);
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: pxToRem(-108);
+      width: pxToRem(77);
+      height: pxToRem(2);
+      margin-top: pxToRem(-1);
+      background-color: $color-white;
+      content: '';
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: pxToRem(16);
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__description {
+    margin-bottom: pxToRem(80);
+    color: $color-dusty-gray;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin-right: pxToRem(80);
+
+  &__image {
+    display: block;
+    width: pxToRem(64);
+    height: auto;
+  }
+
+}
+
+.top-nav {
+  flex-grow: 2;
+  &__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: pxToRem(40);
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,106 @@
+.calc {
+  background-color: $color-cerulean-blue;
+  padding: pxToRem(200) 0 pxToRem(128) 0;
+
+  &__header {
+    padding: 0 pxToRem(24);
+  }
+
+  &__flex {
+    display: flex;
+  }
+
+  &__step {
+    padding: 0 pxToRem(24);
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+ 
+    &.is-active {
+      opacity: 1;
+      pointer-events: all;
+      user-select: all;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: pxToRem(12);
+    color: $color-gallery;
+    font-size: pxToRem(32);
+    font-weight: 700;
+    line-height: pxToRem(32);
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: pxToRem(84);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__step-title {
+    position: relative;
+    padding-left: pxToRem(56);
+    color: $color-white;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: pxToRem(24);
+
+    &_num {
+      &_one {
+        margin-bottom: pxToRem(32);
+      }
+
+      &_two {
+        margin-bottom: pxToRem(288);
+      }
+
+      &_three {
+        margin-bottom: pxToRem(294);
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: pxToRem(32);
+      height: pxToRem(2);
+      margin-top: pxToRem(-1);
+      background-color: $color-white;
+      content: '';
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: pxToRem(40);
+  }
+
+  .input {
+    margin-bottom: pxToRem(32);
+    border: pxToRem(2) solid $color-white;
+    &:focus {
+      border-left: pxToRem(4) solid $color-white;
+    }
+  }
+
+  .input__submit {
+    margin-right: pxToRem(40);
+  }
+
+  .input__terms-link,
+  .input__terms {
+    color: $color-white;
+  }
+
+  .input__container_require_false::after {
+    color: $color-white;
+  }
+}
+

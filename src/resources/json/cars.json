@@ -1,0 +1,47 @@
+[
+    {
+      "id": "teramont",
+      "name": "Teramont",
+      "price": "от 2 949 000 ₽"
+    },
+    {
+      "id": "passat-variant",
+      "name": "Passat Variant",
+      "price": "от 2 139 000 ₽"
+    },
+    {
+      "id": "polo",
+      "name": "Polo",
+      "price": "от 670 900 ₽"
+    },
+    {
+      "id": "touareg-new",
+      "name": "Новый Touareg",
+      "price": "от 3 489 000 ₽"
+    },
+    {
+      "id": "jetta",
+      "name": "Jetta",
+      "price": ""
+    },
+    {
+      "id": "passat",
+      "name": "Passat",
+      "price": "от 1 819 000 ₽"
+    },
+    {
+      "id": "golf",
+      "name": "Golf",
+      "price": "от 670 900 ₽"
+    },
+    {
+      "id": "passat-alltrack",
+      "name": "Passat Alltrack",
+      "price": "от 2 359 000 ₽"
+    },
+    {
+      "id": "tiguan",
+      "name": "Tiguan",
+      "price": "от 1 499 000 ₽"
+    }
+  ]

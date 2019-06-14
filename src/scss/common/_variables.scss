@@ -1,0 +1,28 @@
+// COLORS
+$color-white              : #ffffff;
+$color-cerulean-blue      : #3266bc;
+$color-black              : #000000;
+$color-black-2            : #050505;
+$color-mine-shaft         : #1f1f1f;
+$color-mine-shaft-2       : #333333;
+$color-dusty-gray         : #999999;
+$color-mercury            : #e5e5e5;
+$color-cornflower-blue    : #5591f5;
+$color-wild-sand          : #f5f5f5;
+$color-gallery            : #f0f0f0;
+$color-dove-gray          : #666666;
+
+// LAYOUT
+$layout-base-width        : 1920px;
+$rem-base                 : 16px;
+$rem                      : $rem-base / $layout-base-width * 100vw;
+
+$container-width-thin     : 772px;
+$container-width-normal   : 972px;
+$container-width-wide     : 1190px;
+
+
+// ANIMATION
+$transition-fast          : all .17s ease;
+$transition-normal        : all .33s ease;
+$transition-slow          : all .5s ease;

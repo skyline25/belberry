@@ -1,0 +1,68 @@
+.infobox {
+  padding: pxToRem(24) pxToRem(50) 0 pxToRem(50);
+  border-radius: pxToRem(2);
+  border: pxToRem(2) solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+
+  &__title {
+    margin-top: pxToRem(8);
+    margin-bottom: pxToRem(24);
+    opacity: 0.8;
+    color: $color-white;
+    font-size: pxToRem(18);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__line {
+    margin-bottom: pxToRem(40);
+    padding-bottom: pxToRem(40);
+    border-bottom: pxToRem(1) solid rgba(255,255,255,0.2); 
+    box-sizing: border-box;
+
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: pxToRem(8);
+    opacity: 0.6;
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: 400;
+    line-height: pxToRem(24);
+  }
+
+  &__value {
+    margin-top: 0;
+    margin-bottom: 0;
+    &_type {
+      &_small {
+        opacity: 0.8;
+        color: $color-white;
+        font-size: pxToRem(24);
+        font-weight: 400;
+        line-height: pxToRem(24);
+      }
+
+      &_normal {
+        color: $color-white;
+        font-size: pxToRem(40);
+        font-weight: 700;
+        line-height: pxToRem(40);
+      }
+
+      &_thin {
+        opacity: 0.6;
+        color: $color-white;
+        font-size: pxToRem(40);
+        font-weight: 500;
+        line-height: pxToRem(40);
+      }
+    }
+  }
+}
