@@ -45,7 +45,7 @@
     "inputmask": "^4.0.8",
     "nouislider": "^13.1.5",
     "scroll-to-element": "^2.0.3",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "keywords": []
 }
